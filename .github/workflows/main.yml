@@ -1,0 +1,35 @@
+name: Build and Publish IG
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update IG Publisher
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          args: ./_updatePublisher.sh --force
+
+      - name: Run SUSHI
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          args: sushi
+
+      - name: Run IG Publisher
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          args: ./_genonce.sh -no-sushi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
