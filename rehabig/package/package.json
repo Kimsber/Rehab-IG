@@ -1,11 +1,8 @@
 {
-  "name" : "rehabig.template",
-  "type" : "fhir.template",
-  "license" : "CC-BY-1.0",
-  "description" : "Rehab IG Template",
-  "version" : "current",
-  "base" : "fhir.base.template",
-  "dependencies" : {
-    "fhir.base.template" : "current"
-  }
+  "name": "fhir.tw.rehab.template",
+  "version": "0.1.0",
+  "type": "fhir.template",
+  "description": "Custom template for Rehab Implementation Guide",
+  "author": "Your Name",
+  "license": "CC0-1.0"
 }
