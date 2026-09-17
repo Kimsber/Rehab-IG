@@ -107,6 +107,10 @@ resources:
     exampleCanonical: TCTQuestionnaireResponse
   QuestionnaireResponse/WMFTQuestionnaireResponseExample:
     exampleCanonical: WMFTQuestionnaireResponse
+  QuestionnaireResponse/BRSArmQuestionnaireResponseExample:
+    exampleCanonical:BRSArmQuestionnaireResponse
+  QuestionnaireResponse/MMTUEQuestionnaireResponseExample:
+    exampleCanonical: MMTUEQuestionnaireResponse
   CarePlan/CarePlanExample01:
     exampleCanonical: CarePlan
   Condition/ConditionExample01:
