@@ -48,6 +48,10 @@ Description: "針對手臂布朗斯壯動作分期（BRS-A）問卷的 Questionn
 // ============================================
 // BRS-A 子項目 slicing
 // ============================================
+* item[brsASection].item.linkId 1..1 MS
+* item[brsASection].item.text 0..1 MS
+* item[brsASection].item.answer 0..* MS
+
 * item[brsASection].item ^slicing.discriminator.type = #value
 * item[brsASection].item ^slicing.discriminator.path = "linkId"
 * item[brsASection].item ^slicing.rules = #closed

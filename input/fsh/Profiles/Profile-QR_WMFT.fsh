@@ -1,5 +1,10 @@
 Alias: $snomed = http://snomed.info/sct
 
+Invariant: wmft-answer-integer
+Description: "WMFT score answers use valueInteger when a value is present."
+Severity: #error
+Expression: "value.empty() or value.ofType(integer).exists()"
+
 // ============================================
 // WMFT QuestionnaireResponse Profile
 // ============================================
@@ -37,9 +42,9 @@ Description: "針對WMFT上肢功能評估問卷的QuestionnaireResponse Profile
 * item[TimedIntegrativeFunctionalMovements].linkId = "B-timed-integrative-functional-movements"
 * item[totalScoreSection].linkId = "C-total-score-WMFT"
 
-// ========== 限定每個 section 中的分數型題目必須是整數 ==========
+// Keep the base answer choice binding on a bindable type; enforce integer scores on answers.
 * item[assessmentSide].item.answer.value[x] only Coding
-* item[TimedJointSegmentMovements].item.answer.value[x] only integer
-* item[TimedIntegrativeFunctionalMovements].item.answer.value[x] only integer
-* item[totalScoreSection].item.answer.value[x] only integer
+* item[TimedJointSegmentMovements].item.answer obeys wmft-answer-integer
+* item[TimedIntegrativeFunctionalMovements].item.answer obeys wmft-answer-integer
+* item[totalScoreSection].item.answer obeys wmft-answer-integer
 

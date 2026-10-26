@@ -34,6 +34,12 @@ dependencies:
   tw.gov.mohw.twcore: 1.0.0
   hl7.fhir.uv.sdc: 4.0.0
 
+# UUID 8be0dedb-7465-47e2-b26a-f282e1f1ccbc, represented under the ITU 2.25 arc.
+# Keep input/oids.ini in source control after the Publisher assigns resource OIDs.
+parameters:
+  auto-oid-root: 2.25.185930285992337411134041966484745473212
+  special-url: https://kimsber.github.io/Rehab-IG/CodeSystem/rehab-assessment-codes
+
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -107,9 +113,9 @@ resources:
     exampleCanonical: TCTQuestionnaireResponse
   QuestionnaireResponse/WMFTQuestionnaireResponseExample:
     exampleCanonical: WMFTQuestionnaireResponse
-  QuestionnaireResponse/BRSArmQuestionnaireResponseExample:
-    exampleCanonical:BRSArmQuestionnaireResponse
-  QuestionnaireResponse/MMTUEQuestionnaireResponseExample:
+  QuestionnaireResponse/brsa-response-example-001:
+    exampleCanonical: BRSArmQuestionnaireResponse
+  QuestionnaireResponse/mmt-ue-response-example-001:
     exampleCanonical: MMTUEQuestionnaireResponse
   CarePlan/CarePlanExample01:
     exampleCanonical: CarePlan

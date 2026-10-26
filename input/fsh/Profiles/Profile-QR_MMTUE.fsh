@@ -48,6 +48,10 @@ Description: "針對上肢徒手肌力檢查（Manual Muscle Test, MMT for UE）
 // ============================================
 // MMT 子項目 slicing
 // ============================================
+* item[mmtUESection].item.linkId 1..1 MS
+* item[mmtUESection].item.text 0..1 MS
+* item[mmtUESection].item.answer 0..* MS
+
 * item[mmtUESection].item ^slicing.discriminator.type = #value
 * item[mmtUESection].item ^slicing.discriminator.path = "linkId"
 * item[mmtUESection].item ^slicing.rules = #closed

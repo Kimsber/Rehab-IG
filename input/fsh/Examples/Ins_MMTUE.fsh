@@ -1,5 +1,5 @@
 Alias: $snomed = http://snomed.info/sct
-Alias: $rehab = https://build.fhir.org/ig/Kimsber/Rehab-IG/CodeSystem/rehab-assessment-codes
+Alias: $rehab = https://kimsber.github.io/Rehab-IG/CodeSystem/rehab-assessment-codes
 Alias: $obs-category = http://terminology.hl7.org/CodeSystem/observation-category
 
 // Manual Muscle Test for Upper Extremity (MMT for UE)
@@ -91,6 +91,10 @@ Description: "上肢徒手肌力檢查（Manual Muscle Test, MMT for UE）問卷
 * item[=].item[=].answerOption[+].valueInteger = 3
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
+
+// SDC requires a version algorithm when the Questionnaire has a version.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 
 // 肩膀內收
 * item[=].item[+].linkId = "mmt-shoulder-adduction"

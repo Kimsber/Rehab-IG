@@ -50,6 +50,12 @@ Description: "ARAT上肢功能評估問卷的完整實例，根據Yozbatiran, De
 * item[=].answerOption[=].valueCoding.code = $snomed#7771000
 * item[=].answerOption[=].valueCoding.display = "Left"
 
+// Whether the selected assessment side is affected
+* item[+].linkId = "assessment-side-affected-arat"
+* item[=].text = "評估側是否為患側"
+* item[=].type = #boolean
+* item[=].required = true
+
 // ============================================
 // Section A：掌握分量表 (6個項目)
 // ============================================

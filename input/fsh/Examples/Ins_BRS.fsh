@@ -1,5 +1,5 @@
 Alias: $snomed = http://snomed.info/sct
-Alias: $rehab = https://build.fhir.org/ig/Kimsber/Rehab-IG/CodeSystem/rehab-assessment-codes
+Alias: $rehab = https://kimsber.github.io/Rehab-IG/CodeSystem/rehab-assessment-codes
 Alias: $obs-category = http://terminology.hl7.org/CodeSystem/observation-category
 
 // Brunnstrom Recovery Stage of Arm (BRS-A)
@@ -79,6 +79,10 @@ Description: "手臂布朗斯壯動作分期（Brunnstrom Recovery Stage of Arm,
 * item[=].item[=].answerOption[+].valueInteger = 4
 * item[=].item[=].answerOption[+].valueInteger = 5
 * item[=].item[=].answerOption[+].valueInteger = 6
+
+// SDC requires a version algorithm when the Questionnaire has a version.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 
 // 上肢遠端
 * item[=].item[+].linkId = "brs-a-distal-upper-extremity"

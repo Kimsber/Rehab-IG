@@ -21,6 +21,11 @@ Description: "一位中風患者進行ARAT上肢功能評估的完整問卷回�
 * item[assessmentSide].text = "請選擇評估側"
 * item[assessmentSide].answer.valueCoding = http://snomed.info/sct#24028007 "Right"
 
+// The assessed right side is affected
+* item[assessmentSideAffected].linkId = "assessment-side-affected-arat"
+* item[assessmentSideAffected].text = "評估側是否為患側"
+* item[assessmentSideAffected].answer.valueBoolean = true
+
     
 // ============================================
 // Section A: 掌握分量表 item 1

@@ -1,7 +1,7 @@
 RuleSet: CompositionNarrative(compositionTitle, compositionStatus, compDate)
 * text.status = #generated
 * text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
-  <h3><b>{compositionTitle}</b></h3>
+  <h2><b>{compositionTitle}</b></h2>
   <p><b>狀態：</b> {compositionStatus}</p>
   <p><b>日期：</b> {compDate}</p>
   <p><b>臨床意義：</b> 本文件包含病人的醫療紀錄、診斷及用藥資訊</p>

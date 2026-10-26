@@ -50,6 +50,10 @@ Description: "Modified Ashworth Scale (MAS) 評估量表問卷回覆；結構對
 // ============================================
 // MAS 子項目 slicing
 // ============================================
+* item[masSection].item.linkId 1..1 MS
+* item[masSection].item.text 0..1 MS
+* item[masSection].item.answer 0..* MS
+
 * item[masSection].item ^slicing.discriminator.type = #value
 * item[masSection].item ^slicing.discriminator.path = "linkId"
 * item[masSection].item ^slicing.rules = #closed
